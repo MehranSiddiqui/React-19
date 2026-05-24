@@ -18,6 +18,7 @@ type ProductsResponse = {
 };
 const TransitionHook = () => {
   const [count, setCount] = useState(0);
+  //ProductTitle[] Here defines that this is an array of objects in the format of type casing as in type PRoductTitle at line 10
   const [products, setProducts] = useState<ProductTitle[]>([]);
   const [isPending, startTransition] = useTransition();
   const [limit, setLimit] = useState(0);
@@ -27,7 +28,6 @@ const TransitionHook = () => {
       const data = await networkManager.get<ProductsResponse>(
         `https://dummyjson.com/products?limit=${lmt}`
       );
-      console.log(data, "acksbskajbckjasb");
       startTransition(async () => {
         const productTitleArray = data?.products?.map((product) => {
           return { title: product?.title };
