@@ -3,6 +3,7 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 import TransitionHook from "./Lessons/useTransitionHook";
+import OptimisticHook from "./Lessons/useOptimistocHook";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
             </p>
           </div>
         </div>
-      <TransitionHook />
+        <TransitionHook />
+        <OptimisticHook />
       </section>
 
       <div className="ticks"></div>

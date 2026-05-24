@@ -55,6 +55,10 @@
   }
 }
 
+.bottomSpacing {
+  margin-bottom: 1rem
+}
+
 #center {
   display: flex;
   flex-direction: column;
